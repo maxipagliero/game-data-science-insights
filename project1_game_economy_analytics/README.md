@@ -1,11 +1,32 @@
 # Project 1 – In-Game Economy & Monetization Analytics
 
+**Status: ✅ Complete**
+
 ## Objective
-Analyze a game's in-game economy to understand player spending, retention, and monetization performance, and translate findings into actionable recommendations for game and monetization designers.
+Analyze a free-to-play mobile game's in-game economy to understand player spending, retention, and monetization performance, and translate findings into actionable recommendations for game and monetization designers.
+
+## Key Results
+
+| Metric | Value |
+|---|---|
+| Average DAU | 164 |
+| Total Revenue | $478.46 |
+| Overall ARPU | $0.03 |
+| Overall ARPPU | $8.86 |
+| Payer Conversion Rate | 0.4% |
+| Avg D1 Retention | 39.1% |
+| Avg D7 Retention | 19.6% |
+| Avg D30 Retention | 8.1% |
+
+→ **[Read the full analysis report](reports/game_economy_report.md)**
+
+---
 
 ## Tech Stack
 - PostgreSQL (schema, KPI views)
-- Python (pandas, numpy, matplotlib/plotly)
+- Python (pandas, numpy, matplotlib, seaborn)
+- sqlalchemy + psycopg2 (database connectivity)
+- python-dotenv (credential management)
 - Jupyter Notebooks
 
 ## Key Questions
@@ -18,8 +39,25 @@ Analyze a game's in-game economy to understand player spending, retention, and m
 - `data/` – raw and processed datasets
 - `sql/` – table definitions and KPI views
 - `notebooks/` – exploration and analysis
-- `src/` – reusable data prep and metric functions
-- `reports/` – stakeholder-oriented summaries and figures
+- `src/` – synthetic data generator and reusable functions
+- `reports/` – stakeholder-oriented report and figures
+
+---
+
+## Setup
+
+1. Copy `.env.example` to `.env` and fill in your PostgreSQL credentials:
+```
+   DATABASE_URL=postgresql+psycopg2://user:password@host:5432/dbname
+```
+2. Generate synthetic data:
+```bash
+   python src/generate_data.py
+```
+3. Create schemas, tables, and load data — see **Database Setup** below
+4. Run notebooks in order:
+   - `notebooks/01_explore_data.ipynb`
+   - `notebooks/02_kpis_and_visuals.ipynb`
 
 ---
 
