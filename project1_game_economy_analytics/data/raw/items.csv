@@ -1,0 +1,11 @@
+item_id,item_name,item_type,soft_cost,hard_cost,is_iap
+item_001,Speed Boost,consumable,50,0,False
+item_002,Shield Pack,consumable,75,0,False
+item_003,XP Booster,consumable,100,0,False
+item_004,Rare Skin,cosmetic,500,0,False
+item_005,Epic Skin,cosmetic,0,10,False
+item_006,Legendary Skin,cosmetic,0,25,False
+item_007,Starter Pack,iap,0,0,True
+item_008,Value Pack,iap,0,0,True
+item_009,Mega Pack,iap,0,0,True
+item_010,Season Pass,iap,0,0,True
